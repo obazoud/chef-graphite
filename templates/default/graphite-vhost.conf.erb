@@ -37,10 +37,16 @@
 	</Location>
         <% end -%>
 
+        <Location "/graphene/">
+                SetHandler None
+        </Location>
+
 	# NOTE: In order for the django admin site media to work you
 	# must change @DJANGO_ROOT@ to be the path to your django
 	# installation, which is probably something like:
 	# /usr/lib/python2.6/site-packages/django
         Alias /media/ "@DJANGO_ROOT@/contrib/admin/media/"
+
+        Alias /graphene "/opt/graphene"
 
 </VirtualHost>
